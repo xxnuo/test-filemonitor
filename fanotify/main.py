@@ -195,7 +195,7 @@ def monitor():
                     break
 
                 event_len, vers, reserved, metadata_len, mask_val, event_fd, pid = struct.unpack_from(
-                    "<IBBHQII", data, offset
+                    "<IBBHQii", data, offset
                 )
 
                 if event_len == 0:
